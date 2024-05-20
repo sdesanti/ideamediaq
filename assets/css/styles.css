@@ -1,0 +1,318 @@
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.menu-d{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.categoria2{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    grid-area: header;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+
+}
+
+.hamburguesa{
+    max-width: 10vh;
+}
+.barbudoimg{
+    max-width: 30vh;
+}
+
+.nav{
+    grid-area: nav;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    color: white;
+    padding: 20px;
+
+}
+
+.menu-d{
+    display: none;
+}
+
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cerveza{
+    max-width: 200px;
+    box-shadow: 2px 2px 4px 0 rgba(20, 20, 20, 0.3);
+}
+
+.titulolibro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: #FFBF00;
+}
+
+.facebook{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 5vh;
+}
+
+.numeracion{
+    grid-area: numeracion;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+
+}
+
+.numeros{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+}
+
+.categoria2{
+    display: inline;
+    margin: 30px;
+}
+
+.categoria2:hover{
+    background-color: #FFBF00;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFBF00;
+}
+
+
+.grid-container{
+    grid-template-columns: 1fr;
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    grid-template-areas: 
+        'header'
+        'nav'
+        'main'
+        'numeracion'
+        'footer'
+}
+
+@media (min-width: 576px) {
+
+    .menu-d{
+        display: none;
+        }
+    
+
+    @media (width >= 768px) {
+    .grid-container{
+        grid-template-columns: 
+        8rem;
+
+        grid-template-areas: 
+        'header header'
+        'nav nav'
+        'main main'
+        'numeracion numeracion'
+        'footer footer'
+    }
+    .header{
+        grid-area: header;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+     }
+
+     .nav{
+        grid-area: nav;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+     }
+
+     .menu-d{
+        display: flex;
+        justify-content: center;
+     }
+
+     .categoria{
+        margin: 10px
+     }
+
+    .hamburguesa{
+        display: none;
+    }
+     .main{
+        grid-area: main;
+        grid-template-columns: auto auto auto auto;
+        display: grid;
+        flex-direction: row;
+        margin: 10px;
+        border: 10px;
+        padding: 20px;
+        gap: 30px;
+    }
+    .card{
+        margin: 5px;
+        border: 3px
+    }
+
+    
+    .titulolibro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .footer{
+        grid-area: footer;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+     }
+}
+    @media (width >= 992px) {
+        .grid-container{
+            grid-template-columns: 
+            8rem;
+    
+            grid-template-areas: 
+            'header header'
+            'nav nav'
+            'main main'
+            'numeracion numeracion'
+            'footer footer'
+        }
+        .header{
+            grid-area: header;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+         }
+    
+         .nav{
+            grid-area: nav;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+         }
+    
+         .menu-d{
+            display: flex;
+            justify-content: center;
+         }
+    
+         .categoria{
+            margin: 10px
+         }
+    
+        .hamburguesa{
+            display: none;
+        }
+         .main{
+            grid-area: main;
+            grid-template-columns: auto auto auto auto;
+            display: grid;
+            flex-direction: row;
+            margin: 10px;
+            border: 10px;
+            padding: 20px;
+            gap: 30px;
+        }
+        .card{
+            margin: 5px;
+            border: 3px
+        }
+    
+        
+        .titulolibro{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 10px;
+            padding: 10px;
+        }
+    
+        .footer{
+            grid-area: footer;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+         }
+    }
+    }   
